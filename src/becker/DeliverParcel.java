@@ -9,7 +9,7 @@ public class DeliverParcel {
         City prague = new City();
         Thing parcel = new Thing(prague, 3, 3);
         Thing parcel1 = new Thing(prague, 1, 2);
-        Robot karel = new Robot(prague, 1, 0, Direction.EAST, 5);
+        Robot karel = new Robot(prague, 1, 0, Direction.EAST);
         
 
         // Direct the robot to the final situation
@@ -21,9 +21,10 @@ public class DeliverParcel {
         karel.turnLeft();
         karel.turnLeft();	// finished turning right
         karel.move();
-        karel.putThing();
+        //karel.putThing();
         karel.move();
         karel.pickThing();
+        
         System.out.println(karel.countThingsInBackpack());
     }
 }

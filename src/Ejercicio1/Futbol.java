@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Futbol;
+package Ejercicio1;
 
 import becker.robots.City;
 import becker.robots.Direction;
@@ -28,13 +28,21 @@ public class Futbol {
 
     public void advance() {
         joe.move();
+        joe.move();
 
     }
 
     public void advanceleft() {
-        joe.move();
-        joe.move();
         joe.turnLeft();
+        joe.move();
+        for (int i = 0; i < 3; i++) {
+         joe.turnLeft();
+        }
+        joe.move();
+        joe.move();
+        if (joe.countThingsInBackpack()==1) {
+            joe.putThing();
+        }
 
     }
 
@@ -44,8 +52,10 @@ public class Futbol {
         }
         joe.move();
         joe.move();
-        joe.turnLeft();
-        joe.turnLeft();
+        for (int i = 0; i < 3; i++) {
+            joe.turnLeft();
+        }
+        joe.move();
         joe.turnLeft();
 
     }
